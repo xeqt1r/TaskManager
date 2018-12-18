@@ -1,0 +1,13 @@
+<?php /** @var \TManagment\DTO\EditTaskDTO $data */?>
+<h1>Delete <?=$data->getTask()->getTitle() ?></h1>
+
+<form method="post">
+    Title: <input type="text" name="title" disabled value="<?= $data->getTask()->getTitle()?>"><br>
+    Description: <input type="text" name="description" disabled value="<?=$data->getTask()->getDescription()?>"><br>
+    Location: <input type="text" name="location" disabled value="<?=$data->getTask()->getLocation()?>"><br>
+    Started On: <input type="date" name="started_on" disabled><br>
+    End Date: <input type="date" name="due_date" disabled><br>
+    <input type="submit" name="delete" value="Delete">
+</form>
+
+<a href="dashboard.php">List</a>
