@@ -188,6 +188,13 @@ class TaskRepository implements TaskRepositoryInterface
 
     public function delete(int $id): bool
     {
-        // TODO: Implement delete() method.
+        $query = "DELETE 
+                  FROM tasks
+                  WHERE id = ?";
+
+        $this->db->query($query)
+            ->execute($id);
+
+        return true;
     }
 }

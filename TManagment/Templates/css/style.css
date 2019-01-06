@@ -1,0 +1,167 @@
+body {
+    background: #b3d9ff;
+}
+
+
+h1{
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 50px;
+    color: #0073e6;
+}
+
+.btn {
+    margin-top: 25px;
+    height: 25px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    color: #0073e6;
+}
+
+a {
+    color: #006fe6;
+    text-decoration: none;
+}
+
+
+/*login start*/
+.form-login {
+    margin-left: 350px;
+    background: white;
+    text-align: center;
+    border: 1px solid #006fe6;
+    border-radius: 5px;
+    height: 250px;
+    width: 300px;
+
+}
+
+.username {
+    background: #e6f2ff;
+    margin-top: 50px;
+    text-align: center;
+    height: 35px;
+    width: 200px;
+}
+
+.password {
+    background: #e6f2ff;
+    margin-top: 15px;
+    text-align: center;
+    height: 35px;
+    width: 200px;
+}
+/*login end*/
+
+/*register start*/
+.form-register{
+    margin-left: 350px;
+    background: white;
+    text-align: center;
+    border: 1px solid #006fe6;
+    border-radius: 5px;
+    height: 320px;
+    width: 300px;
+}
+
+.register {
+    margin-top: 15px;
+    background: #e6f2ff;
+    text-align: center;
+    height: 35px;
+    width: 200px;
+
+}
+/*register end*/
+
+/*dashboard start*/
+h2{
+    text-align: center;
+    color: #0073e6;
+}
+
+
+
+.dashboard table,th,td {
+    border-collapse: collapse;
+    background: white;
+    padding: 7px;
+    text-align: center;
+    background: white;
+    border: 2px solid #006fe6;
+
+}
+
+.dashboard p a {
+    border: 2px solid #006fe6;
+    border-radius: 5px;
+    height: 25px;
+    padding: 10px;
+    border-radius: 5px;
+    color: #0073e6;
+    background: #e6f2ff;
+}
+
+/*dashboard end*/
+
+/* add start */
+.add .form-add{
+    margin-left: 350px;
+    background: white;
+    text-align: center;
+    border: 1px solid #006fe6;
+    border-radius: 5px;
+    height: 400px;
+    width: 300px;
+}
+
+.add-input {
+    margin-top: 15px;
+    background: #e6f2ff;
+    text-align: center;
+    height: 35px;
+    width: 200px;
+}
+
+/*add end*/
+
+/* start edit task*/
+.edit .form-edit{
+    margin-left: 350px;
+    background: white;
+    text-align: center;
+    border: 1px solid #006fe6;
+    border-radius: 5px;
+    height: 400px;
+    width: 300px;
+}
+
+.edit-input {
+    margin-top: 15px;
+    background: #e6f2ff;
+    text-align: center;
+    height: 35px;
+    width: 200px;
+}
+/* end edit task*/
+
+/*start delete form*/
+.delete .form-delete{
+    margin-left: 350px;
+    background: white;
+    text-align: center;
+    border: 1px solid #006fe6;
+    border-radius: 5px;
+    height: 220px;
+    width: 300px;
+}
+
+.delete-input {
+    margin-top: 15px;
+    background: #e6f2ff;
+    text-align: center;
+    height: 35px;
+    width: 200px;
+}
+
+/*end delete form*/

@@ -98,6 +98,17 @@ class TaskHttpHandler extends httpHandlerAbstract
                            CategoryServiceInterface $categoryService,
                            array $getData=[],array $formData=[])
     {
+        if (!isset($formData['delete'])){
+            $task = $taskService->view(intval($getData['id']));
+            //$category = $categoryService->view(intval($task->getCategory()->getId()));
+            $editTaskDTO = new EditTaskDTO();
+            $editTaskDTO->setTask($task);
+
+            $this->render("tasks/delete",$editTaskDTO);
+
+        }else{
+            $this->deleteHandlerProcess($taskService,$userService,$categoryService,$getData,$formData);
+        }
 
     }
 
@@ -107,5 +118,8 @@ class TaskHttpHandler extends httpHandlerAbstract
                                          array $getData=[],array $formData=[])
     {
 
+        $taskService->delete(intval($getData['id']));
+
+        $this->redirect("dashboard.php");
     }
 }

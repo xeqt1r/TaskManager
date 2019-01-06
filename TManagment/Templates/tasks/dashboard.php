@@ -1,11 +1,19 @@
 <?php /** @var \TManagment\DTO\TasksDTO $data */?>
+<?php
+echo "<style>";
+include "TManagment/Templates/css/style.css";
+echo "</style>";
+?>
+
+
+<div class="dashboard">
 
 <h1> Dashboard </h1>
 
 <h2> My Tasks </h2>
 
 
-    <table border="1">
+    <table border="2" align="center">
     <thead>
     <tr>
         <th>Title</th>
@@ -28,8 +36,11 @@
     </tbody>
 </table>
 
-<a href="add_task.php">Add Task</a>
+    <p align="center"><a href="add_task.php">Add Task</a></p>
 
+</div>
+
+<a href="logout.php">Logout</a>
 
 
 

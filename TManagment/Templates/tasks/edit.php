@@ -1,22 +1,31 @@
 <?php /** @var \TManagment\DTO\EditTaskDTO $data */?>
+<?php
+echo "<style>";
+include "TManagment/Templates/css/style.css";
+echo "</style>";
+?>
 <h1>Edit <?=$data->getTask()->getTitle() ?></h1>
 
-<form method="post">
-Title: <input type="text" name="title" value="<?= $data->getTask()->getTitle()?>"><br>
-Description: <input type="text" name="description" value="<?=$data->getTask()->getDescription()?>"><br>
-Location: <input type="text" name="location" value="<?=$data->getTask()->getLocation()?>"><br>
-Category:
-<select name="category_id">
+<div class="edit">
+
+<form method="post" class="form-edit">
+<input class="edit-input" placeholder="Title" type="text" name="title" value="<?= $data->getTask()->getTitle()?>"><br>
+<input class="edit-input" placeholder="Description" type="text" name="description" value="<?=$data->getTask()->getDescription()?>"><br>
+<input class="edit-input" placeholder="Location" type="text" name="location" value="<?=$data->getTask()->getLocation()?>"><br>
+
+<select class="edit-input" name="category_id">
     <?php foreach ($data->getCategory()as $category){?>
         <option value="<?php echo $category->getId()?>" ><?php echo $category->getName()?></option>
     <?php } ?>
 </select><br>
-Started On: <input type="date" name="started_on"><br>
-End Date: <input type="date" name="due_date"><br>
-<input type="submit" name="edit" value="EDIT">
+<input class="edit-input" placeholder="Started On" type="date" name="started_on"><br>
+<input class="edit-input" placeholder="End Date" type="date" name="due_date"><br>
+<input  class="btn" type="submit" name="edit" value="EDIT">
 </form>
 
-<a href="dashboard.php">List</a>
+</div>
+
+<p align="center"><a href="dashboard.php">Dashboard</a></p>
 
 
 
