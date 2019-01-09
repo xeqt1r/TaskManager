@@ -31,7 +31,7 @@ class UserRepository implements UserRepositoryInterface
     public function findOneByUserName(string $userName): ?UserDTO
     {
         $query = "
-        SELECT *
+        SELECT id, username, password, first_name, last_name
         FROM users
         WHERE username = ?
         ";

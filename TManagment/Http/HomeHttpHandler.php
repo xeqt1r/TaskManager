@@ -18,7 +18,7 @@ class HomeHttpHandler extends httpHandlerAbstract
     {
 
         if (!isset($_SESSION['id'])){
-            $this->render("users/login");
+            $this->render("home/home");
         }else{
             $this->redirect("dashboard.php");
         }
@@ -38,11 +38,7 @@ class HomeHttpHandler extends httpHandlerAbstract
 
     }
 
-    public function logout(){
 
-        session_destroy();
-        $this->redirect("login.php");
-    }
 
 
 }

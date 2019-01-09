@@ -32,18 +32,30 @@ class UserService implements UserServiceInsterface
     public function login($userName, $password): bool
     {
        $user = $this->userRepository->findOneByUserName($userName);
+
+
+
        if (null===$user){
-           echo "User Name NOT Found!!!";
+        echo "User name not found!!!";
+        exit;
        }
 
-       $passwordHash = $user->getPassword();
-       if(!password_verify($password,$passwordHash)){
-           echo "Wrong password";
-       }
 
-       $_SESSION['id'] = $user->getId();
 
-       return true;
+        $passwordHash = $user->getPassword();
+
+        if(!password_verify($password,$passwordHash)){
+            echo "Wrong password";
+            exit;
+        }else{
+
+            $_SESSION['id'] = $user->getId();
+            return true;
+        }
+
+
+
+
 
     }
 
